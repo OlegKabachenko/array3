@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+2#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import sys
@@ -7,6 +7,8 @@ from TK_1 import input_data_from_console
 from TK_2 import find_min_max
 from TK_3 import get_average_list
 from TK_4 import get_multiplication_list
+temp = importlib.__import__('TK-5', globals(), locals(), [], 0)
+get_root_list = temp.get_root_list
 def main():
     count = int(input('Get count data:'))
     list_data = input_data_from_console(count)
