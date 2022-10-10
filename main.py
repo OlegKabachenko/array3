@@ -1,16 +1,21 @@
-# This is a sample Python script.
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import sys
+import importlib
+from TK_1 import input_data_from_console
+from TK_2 import find_min_max
+from TK_3 import get_average_list
+from TK_4 import get_multiplication_list
+def main():
+    count = int(input('Get count data:'))
+    list_data = input_data_from_console(count)
+    print('Max/Min:' + str(find_min_max(list_data)))
+    print('List_Of_Values_Divided_On_Average:' + str(get_average_list(list_data)))
+    print('List_Of_Multiplicated_Values:' + str(get_multiplication_list(list_data)))
+    print('List_Of_Root_Values:' + str(get_root_list(list_data)))
+    return 0
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    sys.exit(main())
